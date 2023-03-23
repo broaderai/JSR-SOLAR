@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | Ai Writer</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../assets/styles/siginStyle.css">
+</head>
+
+<body>
+
+    <header></header>
+    <main>
+
+        <div class="mainLogin">
+
+            <div class="signin-left">
+                <img class="hero_mainImg" src="./img/1_signin/hero_signin.png" alt="Artificial Intelligence Hero img">
+                <img class="hero_bgTop" src="./img/hero_bg_top.png" alt="hero bg top">
+                <img class="hero_bgBottom" src="./img/hero_bg_bottom.png" alt="hero bg bottom">
+            </div>
+
+            <div class="signin-right">
+
+                <div>
+                    <div class="signin-info">
+                        <h1 class="fs-primary-heading text-primary-400 fw-semi-bold">Sign in for</h1>
+                        <p class="text-primary-400 fw-semi-bold">Sign up with the Google or Outlook account you use for
+                            work and
+                            connect
+                            your
+                            calendar to start.</p>
+                    </div>
+
+                    <form class="sigin-form">
+
+                        <div class="inputbox">
+                            <label for="email">Email *</label>
+                            <input type="email" placeholder="enter your email" name="email" id="email" required>
+                        </div>
+
+                        <div class="inputbox">
+                            <label for="email">Password *</label>
+                            <div class="passwordInput">
+                                <input type="password" autocomplete="on" placeholder="enter your password"
+                                    name="password" id="password" required>
+                                <span class="showPassword">
+                                    <i id="hide-1" class="fa-solid fa-eye"></i>
+                                    <i id="hide-2" class="fa-solid fa-eye-slash"></i>
+                                </span>
+                            </div>
+                            <a href="#" class="forgotPass || text-accent-400">Forgot your password?</a>
+                        </div>
+
+                        <button type="submit" class="btn">Sign In</button>
+                    </form>
+
+                    <div class="orLine">
+                        <span></span>
+                        <p class="fw-bold">or</p>
+                        <span></span>
+                    </div>
+
+                    <div class="login-google">
+                        <a href="#" class="btn" data-type="transparent">
+                            <i class="fa-brands fa-google"></i><span>Login Through Google</span>
+                        </a>
+                    </div>
+
+                    <div class="signIn-footer">
+                        <p>Don't have an account?<a href="./signup.html" class="text-accent-400">Sign up.</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <footer></footer>
+
+
+    <!-- TODO: User Scripts -->
+    <!-- <script type=" module" src="./main.js"></script> -->
+    <script src="./main.js"></script>
+    <script>
+        //? To show password
+        const showPasswordSpan = document.querySelector(".showPassword");
+        const hideIcon1 = document.querySelector("#hide-1");
+        const hideIcon2 = document.querySelector("#hide-2");
+
+        showPasswordSpan.addEventListener("click", () => {
+            const x = document.getElementById("password");
+
+            if (x.type === "password") {
+                x.type = "text";
+
+                hideIcon1.style.display = "none";
+                hideIcon2.style.display = "block";
+            } else {
+                x.type = "password";
+
+                hideIcon1.style.display = "block";
+                hideIcon2.style.display = "none";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
